@@ -761,3 +761,6 @@ ul li {
   margin: 0;
   padding: 0;
 }
+.product-details > *{
+  width: 100%;
+}
