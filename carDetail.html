@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <title>SmartHome</title>
+    <link
+      rel="shortcut icon"
+      href="assets/Apple-logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <h1 class="internalLogo" style="display: none">
+            <a href="#">SmartHome</a>
+          </h1>
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="./cars.html">Cars</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="logo">
+          <h1><a href="#">SmartHome</a></h1>
+          <div class="menu" style="display: none">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+        <div class="cl-1">
+          <a href="#">Login</a>
+          <a href="#">Sign up</a>
+        </div>
+      </nav>
+      <div class="header-main">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. In numquam
+          commodi excepturi vero error aliquid iste neque velit aut, expedita
+          quod id et, tempora ullam, eligendi esse quibusdam quas pariatur!
+        </p>
+      </div>
+      <ul class="socialLinks">
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+      </ul>
+    </header>
+    <div class="cars">
+      <h1>Our Cars</h1>
+    </div>
+    <di class="product-details"></di
+        v>
+    <footer>
+      <div class="footer">
+        <div class="subscribe">
+          <h3>Smarthome</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sed
+            recusandae at reprehenderit repellendus error ducimus.
+          </p>
+          <form action="#">
+            <input type="text" name="suscribe" placeholder="Enter Email" />
+            <button><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+        </div>
+        <ul>
+          <h2>Permalinks</h2>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul>
+          <h2>Primacy</h2>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+        <ul>
+          <h2>Contact Us</h2>
+          <li><a href="#">+20 121 2745 939</a></li>
+          <li><a href="#">mmoh33650@gmail.com</a></li>
+          <li>
+            <ul>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <p>© 2023 - <a href="#">Leon</a> , All Right Reserved</p>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get("car");
+
+      fetch("https://mohamedreda3.github.io/json/cars.json")
+        .then((res) => res.json())
+        .then((cars) => {
+          const car = cars.filter((item) => item.id == id)[0];
+          document.querySelector('.product-details').innerHTML = `
+          <h1>${car.heading}</h1>
+        <div class="product-images">
+          <img src="${car.images[0]}" alt="vehicle image">
+        </div>
+        <div class="product-info">
+          <p>Vehicle Make/Model:  <span>${car.vehicleMakeModel}</span></p>
+          <p>Trim: <span>${car.vehicleTrim}</span></p>
+          <p>Engine: <span>${car.engine}</span></p>
+          <p>Dealer Price: <span>${car.dealerPrice}</span></p>
+          <p>Dealer Name: <span>${car.dealerName}</span></p>
+          <p>Dealer Location: <span>${car.dealerLocation}</span></p>
+          <p>Colors:
+           <p>color: <span>${car.colors[0].color}</span></p> 
+    <p>color: <span>${car.colors[1].color}</span></p> 
+          </p>
+        </div>
+          `
+        });
+    </script>
+  </body>
+</html>
