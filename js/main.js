@@ -24,7 +24,8 @@ faqs.forEach((faq, index) => {
 });
 
 
-      document.querySelector(".logo a")?.textContent = "Car Home";
+    document.querySelector(".logo a").innerText = "Car Home";
+    
       document.title = "Car Home";
 
 
