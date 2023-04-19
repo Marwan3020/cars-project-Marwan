@@ -43,6 +43,12 @@ header {
   flex-direction: column;
 }
 
+@media (max-width: 680px) {
+  header {
+    min-height: 70vh;
+  }
+}
+
 .cl-1 {
   margin-left: auto;
   display: flex;
@@ -154,6 +160,12 @@ ul.socialLinks {
   font-size: 24px;
   padding: 0;
   left: 6%;
+}
+
+@media (max-width: 680px) {
+  ul.socialLinks {
+    display: none;
+  }
 }
 
 .header-main-images {
@@ -622,7 +634,7 @@ ul li {
   align-content: center;
   gap: 10px;
   padding: 5px;
-  margin:10px auto;
+  margin: 10px auto;
   grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
 }
 
@@ -631,7 +643,7 @@ ul li {
   text-align: center;
   padding: 10px 30px;
   margin: 18px auto;
-  border-bottom: .3px solid rgba(128, 128, 128, 0.627);
+  border-bottom: 0.3px solid rgba(128, 128, 128, 0.627);
 }
 .cars-list > li {
   width: 300px;
@@ -647,14 +659,16 @@ ul li {
   margin: 0;
 }
 
-.cars-list li p, .product-info p {
+.cars-list li p,
+.product-info p {
   padding: 0;
   margin: 8px 0;
   text-align: left;
   color: #616fa9;
   width: 100%;
 }
-.cars-list li p span, .product-info p span {
+.cars-list li p span,
+.product-info p span {
   color: rgba(0, 0, 0, 0.541);
   margin-left: 5px;
   font-size: 14px;
@@ -666,85 +680,84 @@ ul li {
   border-radius: 4px;
 }
 
-.cars-list li a{
-    width: 100%;
-    color: white;
-    padding: 10px;
-    background-color: #1e5af9;
-    transition: .5s ease-in-out;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 1px 2.5px 15px -2.5px rgba(128, 128, 128, 0.36);
+.cars-list li a {
+  width: 100%;
+  color: white;
+  padding: 10px;
+  background-color: #1e5af9;
+  transition: 0.5s ease-in-out;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 1px 2.5px 15px -2.5px rgba(128, 128, 128, 0.36);
 }
 
-.cars-list li a:hover{
-    background-color: #1e58f9a2;
-
+.cars-list li a:hover {
+  background-color: #1e58f9a2;
 }
 
 .product-details {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-  }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
 
-  .product-details h1 {
-    font-size: 24px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    width: 100%;
-  }
+.product-details h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
 
-  .product-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    width: 50%;
-  }
+.product-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 50%;
+}
 
-  .product-images img {
-    max-width: 100%;
-    height: auto;
-  }
+.product-images img {
+  max-width: 100%;
+  height: auto;
+}
 
-  .product-info {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    width: 50%;
-  }
+.product-info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 50%;
+}
 
-  .product-info p {
-    font-size: 16px;
-    margin: 10px 0;
-    padding: 0;
-    /* text-align: center; */
-    width: 100%;
-  }
+.product-info p {
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 0;
+  /* text-align: center; */
+  width: 100%;
+}
 
-  .product-info ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    width: 100%;
-  }
+.product-info ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
 
-  .product-info ul li {
-    margin: 5px 0;
-    padding: 0;
-    width: 100%;
-  }
+.product-info ul li {
+  margin: 5px 0;
+  padding: 0;
+  width: 100%;
+}
 
-  .product-info ul li p {
-    margin: 0;
-    padding: 0;
-  }
+.product-info ul li p {
+  margin: 0;
+  padding: 0;
+}
