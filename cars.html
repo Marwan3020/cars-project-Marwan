@@ -27,6 +27,7 @@
       href="assets/Apple-logo.png"
       type="image/x-icon"
     />
+
   </head>
   <body>
     <header>
@@ -139,7 +140,6 @@
       fetch("https://mohamedreda3.github.io/json/cars.json")
         .then((res) => res.json())
         .then((cars) => {
-          console.log(cars[0]);
           cars.forEach((car) => {
             const obj = `<li>
       <img src="${car.images[0]}" alt="vehicle image">

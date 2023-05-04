@@ -1,4 +1,5 @@
 var menu = document.querySelector(".menu");
+
 menu.onclick = () => {
   document.querySelector("nav ul").classList.toggle("active");
 };
@@ -25,8 +26,7 @@ faqs.forEach((faq, index) => {
 
 
     document.querySelector(".logo a").innerText = "Car Home";
-    
-      document.title = "Car Home";
+    document.title = "Car Home";
 
 
 
